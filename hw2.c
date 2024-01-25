@@ -34,7 +34,7 @@ double calculate_bill(char *in_file, char *customer) {
             return BAD_DATE;
         }
         else if (strcmp(customer_type, customer) == 0) {
-            double bill = (0.01 * bytes) + (0.02 * blocks) + (0.06 * servers * hours);
+            double bill = (0.01 * network) + (0.02 * blocks) + (0.06 * servers * hours);
             total_bill += bill;
             data_found = 1;
         }
