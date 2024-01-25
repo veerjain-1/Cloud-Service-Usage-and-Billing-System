@@ -88,13 +88,12 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
     }
 
     fclose(input_file);
+    fclose(output_file);
+
     if (!data_found) {
-        fclose(output_file);
         return NO_DATA_POINTS;
     }
 
-    fprintf(output_file, "Report for year: %d\n", year);
-    fclose(output_file);
     return SUCCESS;
 }
 /* Define get_storage_usage here */
