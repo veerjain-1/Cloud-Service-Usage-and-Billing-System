@@ -19,21 +19,16 @@ double calculate_bill(char *in_file, char *customer) {
     double total_bill = 0.0;
     char customer_type[50];
     int data_found = 0;
-    int record_read;
 
-    while ((record_read = fscanf(file, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks)) != EOF) {
-        if (record_read != 9) {
+    while (fscanf(file, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks) == 9) {
+        // Check for BAD_RECORD conditions
+        if (servers < 0 || hours < 0 || network < 0 || bytes < 0 || blocks < 0) {
             fclose(file);
             return BAD_RECORD;
         }
 
         // Check if the record matches the specified customer
         if (strcmp(customer_type, customer) == 0) {
-            if (servers <= 0 || hours <= 0 || network <= 0 || bytes <= 0 || blocks <= 0) {
-                fclose(file);
-                return BAD_RECORD;
-            }
-
             double bill = (0.01 * bytes) + (0.02 * blocks) + (0.06 * servers * hours);
             total_bill += bill;
             data_found = 1;
@@ -48,6 +43,8 @@ double calculate_bill(char *in_file, char *customer) {
 
     return total_bill;
 }
+
+
 /* Define generate_network_usage_report here */
 int generate_network_usage_report(char *in_file, char *customer, int year, char *out_file) {
     FILE *inputfile = fopen(in_file, "r");
