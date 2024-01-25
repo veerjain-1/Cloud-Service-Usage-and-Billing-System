@@ -55,45 +55,48 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
     float servers, hours, network, bytes, blocks;
     char customer_type[50];
     int data_found = 0;
-    FILE *inputfile = fopen(in_file, "r");
-    if (inputfile == NULL) {
+    FILE *input_file = fopen(in_file, "r");
+    if (input_file == NULL) {
         return FILE_READ_ERR;
     }
-
-    FILE *outputFile = fopen(out_file, "w");
-    if (outputFile == NULL) {
-        fclose(inputfile); 
+    FILE *output_file = fopen(out_file, "w");
+    if (output_file == NULL) {
+        fclose(input_file);
         return FILE_WRITE_ERR;
     }
 
-    fprintf(outputFile, "%s\n", customer);
+    fprintf(output_file, "%s\n", customer);
     while (1) {
-        int result = fscanf(inputfile, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
-        if (result == EOF) {
+        int index = fscanf(input_file, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+        if (index == EOF) {
             break;
         }
-        if (result != 9) {
-            fclose(inputfile);
-            fclose(outputFile);
+        if (index != 9 || servers < 0 || hours < 0 || network < 0 || bytes < 0 || blocks < 0) {
+            fclose(input_file);
+            fclose(output_file);
             return BAD_RECORD;
         }
+        if (months < 1 || months > 12 || days < 1 || days > 31 || years < 0) {
+            fclose(input_file);
+            fclose(output_file);
+            return BAD_DATE;
+        }
         if (strcmp(customer_type, customer) == 0 && year == years) {
-            fprintf(outputFile, "%d/%d/%d: %f\n", months, days, years, network);
+            fprintf(output_file, "%d/%d/%d: %f\n", months, days, years, network);
             data_found = 1;
         }
     }
 
-    fclose(inputfile);
+    fclose(input_file);
     if (!data_found) {
-        fclose(outputFile);
+        fclose(output_file);
         return NO_DATA_POINTS;
     }
 
-    fprintf(outputFile, "Report for year: %d\n", year);
-    fclose(outputFile);
+    fprintf(output_file, "Report for year: %d\n", year);
+    fclose(output_file);
     return SUCCESS;
 }
-
 /* Define get_storage_usage here */
 int get_storage_usage(char *in_file, char *customer, int year) {
     FILE *inputfile = fopen(in_file, "r");
