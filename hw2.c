@@ -23,7 +23,7 @@ double calculate_bill(char *in_file, char *customer) {
     
 
     while (1) {
-        int index2 = fscanf(file, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+        int index2 = fscanf(file, "%d/%d/%d|%[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
         if(index2 == EOF){
             break;
         }
@@ -33,7 +33,7 @@ double calculate_bill(char *in_file, char *customer) {
         }
         else if (months<1 || months>12 || days<1 || days>31 || years<0){
             fclose(file);
-            return BAD_RECORD;
+            return BAD_DATE;
         }
         else if (strcmp(customer_type, customer) == 0) {
             double bill = (0.01 * bytes) + (0.02 * blocks) + (0.06 * servers * hours);
