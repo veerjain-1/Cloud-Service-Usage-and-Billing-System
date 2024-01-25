@@ -51,6 +51,10 @@ double calculate_bill(char *in_file, char *customer) {
 
 /* Define generate_network_usage_report here */
 int generate_network_usage_report(char *in_file, char *customer, int year, char *out_file) {
+    int days, months, years;
+    float servers, hours, network, bytes, blocks;
+    char customer_type[50];
+    int data_found = 0;
     FILE *inputfile = fopen(in_file, "r");
     if (inputfile == NULL) {
         return FILE_READ_ERR;
@@ -61,11 +65,6 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
         fclose(inputfile); 
         return FILE_WRITE_ERR;
     }
-
-    int days, months, years;
-    float servers, hours, network, bytes, blocks;
-    char customer_type[50];
-    int data_found = 0;
 
     fprintf(outputFile, "%s\n", customer);
     while (1) {
