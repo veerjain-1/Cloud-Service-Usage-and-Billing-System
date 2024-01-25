@@ -22,7 +22,7 @@ double calculate_bill(char *in_file, char *customer) {
     int index2=0;
 
     while ((index2=fscanf(file, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks)) != EOF) {
-        if(index2!=9 && servers>0 && hours>0 && network>0 && bytes > 0 && blocks>0){
+        if(index2!=9 && servers<0 && hours<0 && network<0 && bytes < 0 && blocks<0){
             return BAD_RECORD;
         }
         if (strcmp(customer_type, customer) == 0) {
