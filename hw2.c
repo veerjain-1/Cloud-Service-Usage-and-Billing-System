@@ -20,13 +20,22 @@ double calculate_bill(char *in_file, char *customer) {
     double total_bill = 0.0;
     char customer_type[50];
     int data_found = 0;
-    int index2=0;
+    
 
-    while ((index2=fscanf(file, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks)) != EOF) {
-        if(index2!=9 || servers<0 || hours<0 || network<0 || bytes < 0 || blocks<0){
+    while (1) {
+        int index2 = fscanf(file, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+        if(index2 == EOF){
+            break;
+        }
+        else if(index2!=9 || servers<0 || hours<0 || network<0 || bytes < 0 || blocks<0){
+            fclose(file);
             return BAD_RECORD;
         }
-        if (strcmp(customer_type, customer) == 0) {
+        else if (months<1 || months>12 || days<1 || days>31 || years<0){
+            fclose(file);
+            return BAD_RECORD;
+        }
+        else if (strcmp(customer_type, customer) == 0) {
             double bill = (0.01 * bytes) + (0.02 * blocks) + (0.06 * servers * hours);
             total_bill += bill;
             data_found = 1;
@@ -38,7 +47,6 @@ double calculate_bill(char *in_file, char *customer) {
     if (!data_found) {
         return NO_DATA_POINTS;
     }
-
     return total_bill;
 }
 
