@@ -11,19 +11,17 @@
 
 
 double calculate_bill(char *in_file, char *customer) {
-    FILE *file = fopen(in_file, "r");
-    if (file == NULL) {
-        return FILE_READ_ERR;
-    }
     int days, months, years;
     float servers, hours, network, bytes, blocks;
     double total_bill = 0.0;
     char customer_type[50];
     int data_found = 0;
-    
-
+    FILE *file = fopen(in_file, "r");
+    if (file == NULL) {
+        return FILE_READ_ERR;
+    }
     while (1) {
-        int index2 = fscanf(file, "%d/%d/%d|%[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+        int index2 = fscanf(file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
         if(index2 == EOF){
             break;
         }
