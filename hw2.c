@@ -154,12 +154,25 @@ int get_network_usage(char *in_file, int month, int year) {
         return FILE_READ_ERR;
     }
 
-    int days, months, years, networkUsage = 0, data_found = 0;
+    int days, months, years, networkUsage = 0;
     float servers, hours, network, bytes, blocks;
     char customer_type[50];
+    int data_found = 0;
 
-    while (fscanf(inputfile, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks) != EOF) {
-        if (month == months && year == years) {
+    while (1) {
+        int index2 = fscanf(inputfile, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+        if(index2 == EOF){
+            break;
+        }
+        else if(index2!=9 || servers<0 || hours<0 || network<0 || bytes < 0 || blocks<0){
+            fclose(inputfile);
+            return BAD_RECORD;
+        }
+        else if (months<1 || months>12 || days<1 || days>31 || years<0 || year<0 || month<1 || month>12){
+            fclose(inputfile);
+            return BAD_DATE;
+        }
+        else if (months == month && year == years) {
             networkUsage += network;
             data_found = 1;
         }
