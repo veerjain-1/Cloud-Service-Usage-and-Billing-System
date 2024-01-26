@@ -55,6 +55,7 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
     float servers, hours, network, bytes, blocks;
     char customer_type[50];
     int data_found = 0;
+    int index1 = 0;
     FILE *input_file = fopen(in_file, "r");
     if (input_file == NULL) {
         return FILE_READ_ERR;
@@ -82,10 +83,11 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
             return BAD_DATE;
         }
         else if (strcmp(customer_type, customer) == 0 && year == years) {
-            fprintf(output_file, "%d/%d/%d: %f\n", months, days, years, network);
+            fprintf(output_file, "%02d:%f\n", index1, network);
             data_found = 1;
         }
     }
+    fprintf(output_file, "%04d\n", year);
 
     fclose(input_file);
     fclose(output_file);
