@@ -55,7 +55,9 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
     float servers, hours, network, bytes, blocks;
     char customer_type[50];
     int data_found = 0;
-    int index1 = 0;
+    int current_month = 1; // Initialize the current month
+    float monthly_total = 0.0; // Initialize the monthly total
+
     FILE *input_file = fopen(in_file, "r");
     if (input_file == NULL) {
         return FILE_READ_ERR;
@@ -67,26 +69,34 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
     }
 
     fprintf(output_file, "%s\n", customer);
+
     while (1) {
         int index = fscanf(input_file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
         if (index == EOF) {
             break;
-        }
-        else if (index != 9 || servers < 0 || hours < 0 || network < 0 || bytes < 0 || blocks < 0) {
+        } else if (index != 9 || servers < 0 || hours < 0 || network < 0 || bytes < 0 || blocks < 0) {
             fclose(input_file);
             fclose(output_file);
             return BAD_RECORD;
-        }
-        else if (months < 1 || months > 12 || days < 1 || days > 30 || years < 0 || year<0) {
+        } else if (months < 1 || months > 12 || days < 1 || days > 30 || years < 0 || year < 0) {
             fclose(input_file);
             fclose(output_file);
             return BAD_DATE;
-        }
-        else if (strcmp(customer_type, customer) == 0 && year == years) {
-            fprintf(output_file, "%02d:%f\n", index1, network);
+        } else if (strcmp(customer_type, customer) == 0 && year == years) {
+            // Check if the month has changed, and if so, write the total for the previous month
+            if (months != current_month) {
+                fprintf(output_file, "%02d:%.2f\n", current_month, monthly_total);
+                current_month = months;
+                monthly_total = 0.0; // Reset monthly total for the new month
+            }
+            monthly_total += network; // Accumulate network usage for the current month
             data_found = 1;
         }
     }
+
+    // Write the total for the last month
+    fprintf(output_file, "%02d:%.2f\n", current_month, monthly_total);
+
     fprintf(output_file, "%04d\n", year);
 
     fclose(input_file);
@@ -98,6 +108,8 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
 
     return SUCCESS;
 }
+
+
 /* Define get_storage_usage here */
 int get_storage_usage(char *in_file, char *customer, int year) {
     FILE *inputfile = fopen(in_file, "r");
