@@ -127,7 +127,7 @@ int get_storage_usage(char *in_file, char *customer, int year) {
             fclose(file);
             return BAD_RECORD;
         }
-        else if (months<1 || months>12 || days<1 || days>31 || years<0){
+        else if (months<1 || months>12 || days<1 || days>31 || years<0 || year<0){
             fclose(file);
             return BAD_DATE;
         }
