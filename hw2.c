@@ -71,17 +71,17 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
         if (index == EOF) {
             break;
         }
-        if (index != 9 || servers < 0 || hours < 0 || network < 0 || bytes < 0 || blocks < 0) {
+        else if (index != 9 || servers < 0 || hours < 0 || network < 0 || bytes < 0 || blocks < 0) {
             fclose(input_file);
             fclose(output_file);
             return BAD_RECORD;
         }
-        if (months < 1 || months > 12 || days < 1 || days > 31 || years < 0) {
+        else if (months < 1 || months > 12 || days < 1 || days > 31 || years < 0) {
             fclose(input_file);
             fclose(output_file);
             return BAD_DATE;
         }
-        if (strcmp(customer_type, customer) == 0 && year == years) {
+        else if (strcmp(customer_type, customer) == 0 && year == years) {
             fprintf(output_file, "%d/%d/%d: %f\n", months, days, years, network);
             data_found = 1;
         }
