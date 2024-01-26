@@ -67,7 +67,7 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
 
     fprintf(output_file, "%s\n", customer);
     while (1) {
-        int index = fscanf(input_file, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+        int index = fscanf(input_file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
         if (index == EOF) {
             break;
         }
