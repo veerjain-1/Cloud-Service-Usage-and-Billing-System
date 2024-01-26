@@ -8,8 +8,6 @@
 #include <string.h>
 
 /* Define calculate_bill here */
-
-
 double calculate_bill(char *in_file, char *customer) {
     int days, months, years;
     float servers, hours, network, bytes, blocks;
@@ -112,28 +110,34 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
 
 /* Define get_storage_usage here */
 int get_storage_usage(char *in_file, char *customer, int year) {
-    FILE *inputfile = fopen(in_file, "r");
-    if (inputfile == NULL) {
-        return FILE_READ_ERR;
-    }
-
     int days, months, years, storageUsage = 0, data_found = 0;
     float servers, hours, network, bytes, blocks;
     char customer_type[50];
-
-    int result;
-    while ((result = fscanf(inputfile, "%d/%d/%d|%49[^|]|%f|%f|%f|%f|%f", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks)) != EOF) {
-        if (result != 9) {
-            fclose(inputfile);
+    FILE *file = fopen(in_file, "r");
+    if (file == NULL) {
+        return FILE_READ_ERR;
+    }
+    
+    while (1) {
+        int index2 = fscanf(file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+        if(index2 == EOF){
+            break;
+        }
+        else if(index2!=9 || servers<0 || hours<0 || network<0 || bytes < 0 || blocks<0){
+            fclose(file);
             return BAD_RECORD;
         }
-        if (strcmp(customer_type, customer) == 0 && year == years) {
+        else if (months<1 || months>12 || days<1 || days>31 || years<0){
+            fclose(file);
+            return BAD_DATE;
+        }
+        else if (strcmp(customer_type, customer) == 0 && year == years) {
             storageUsage += bytes;
             data_found = 1;
         }
     }
 
-    fclose(inputfile);
+    fclose(file);
 
     if (!data_found) {
         return NO_DATA_POINTS;
