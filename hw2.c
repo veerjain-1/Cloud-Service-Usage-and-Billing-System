@@ -65,13 +65,12 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
   int years = 0;
   float servers = 0.0;
   float hours = 0.0;
-  float network = 0.0;
+  int network = 0;
   float bytes = 0.0;
   float blocks = 0.0;
   char customer_type[50] = {};
   int data_found = 0;
-  int current_month = 1;
-  float monthly_total = 0.0;
+  int monthly_totals[13] = {0}; 
 
   FILE *input_file = fopen(in_file, "r");
   if (input_file == NULL) {
@@ -86,7 +85,7 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
   fprintf(output_file, "%s\n", customer);
 
   while (1) {
-    int index = fscanf(input_file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+    int index = fscanf(input_file, "%d/%d/%d|%[^|]|%f|%f|%d|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
     if (index == EOF) {
       break;
     }
@@ -95,22 +94,20 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
       fclose(output_file);
       return BAD_RECORD;
     }
-    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30) || (years < 0) || (year < 0)) {
+    else if ((months < 1) || (months > 12) || (days < 1) || (days > 31) || (years < 0) || (year < 0)) {
       fclose(input_file);
       fclose(output_file);
       return BAD_DATE;
     }
     else if ((strcmp(customer_type, customer) == 0) && (year == years)) {
-      if (months != current_month) {
-        fprintf(output_file, "%02d:%.2f\n", current_month, monthly_total);
-        current_month = months;
-        monthly_total = 0.0;
-      }
-      monthly_total += network;
+      monthly_totals[months] += network;
       data_found = 1;
     }
   }
-  fprintf(output_file, "%02d:%.2f\n", current_month, monthly_total);
+
+  for (int i = 1; i <= 12; i++) {
+    fprintf(output_file, "%02d:%d\n", i, monthly_totals[i]);
+  }
 
   fprintf(output_file, "%04d\n", year);
 
