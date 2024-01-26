@@ -1,5 +1,5 @@
 /* Veer Jain, hw2.c, CS 240, Spring 2024
- * Last updated Jan 24, 2023
+ * Last updated Jan 25, 2023
  */
 
 /* Add any includes here */
