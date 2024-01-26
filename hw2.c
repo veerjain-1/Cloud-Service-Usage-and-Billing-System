@@ -76,7 +76,7 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
             fclose(output_file);
             return BAD_RECORD;
         }
-        else if (months < 1 || months > 12 || days < 1 || days > 31 || years < 0) {
+        else if (months < 1 || months > 12 || days < 1 || days > 30 || years < 0 || year<0) {
             fclose(input_file);
             fclose(output_file);
             return BAD_DATE;
