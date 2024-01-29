@@ -28,20 +28,24 @@ double calculate_bill(char *in_file, char *customer) {
     return FILE_READ_ERR;
   }
   while (1) {
-    int index2 = fscanf(file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+    int index2 = fscanf(file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, 
+    &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
     if (index2 == EOF) {
       break;
     }
-    else if ((index2 != 9) || (servers < 0) || (hours < 0) || (network < 0) || (bytes < 0) || (blocks < 0)) {
+    else if ((index2 != 9) || (servers < 0) || (hours < 0) || (network < 0) ||
+      (bytes < 0) || (blocks < 0)) {
       fclose(file);
       return BAD_RECORD;
     }
-    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30) || (years < 0)) {
+    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30)
+      || (years < 0)) {
       fclose(file);
       return BAD_DATE;
     }
     else if (strcmp(customer_type, customer) == 0) {
-      double bill = (0.01 * network) + (0.02 * blocks) + (0.06 * servers * hours);
+      double bill = (0.01 * network) + (0.02 * blocks) + 
+      (0.06 * servers * hours);
       total_bill += bill;
       data_found = 1;
     }
@@ -59,7 +63,8 @@ double calculate_bill(char *in_file, char *customer) {
  * Function to Generate Network Usage Report
  */
 
-int generate_network_usage_report(char *in_file, char *customer, int year, char *out_file) {
+int generate_network_usage_report(char *in_file, char *customer,
+                                  int year, char *out_file) {
   int days = 0;
   int months = 0;
   int years = 0;
@@ -85,16 +90,19 @@ int generate_network_usage_report(char *in_file, char *customer, int year, char 
   fprintf(output_file, "%s\n", customer);
 
   while (1) {
-    int index = fscanf(input_file, "%d/%d/%d|%[^|]|%f|%f|%d|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+    int index = fscanf(input_file, "%d/%d/%d|%[^|]|%f|%f|%d|%f/%f\n", &months, 
+    &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
     if (index == EOF) {
       break;
     }
-    else if ((index != 9) || (servers < 0) || (hours < 0) || (network < 0) || (bytes < 0) || (blocks < 0)) {
+    else if ((index != 9) || (servers < 0) || (hours < 0) || (network < 0)
+      || (bytes < 0) || (blocks < 0)) {
       fclose(input_file);
       fclose(output_file);
       return BAD_RECORD;
     }
-    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30) || (years < 0) || (year < 0)) {
+    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30)
+      || (years < 0) || (year < 0)) {
       fclose(input_file);
       fclose(output_file);
       return BAD_DATE;
@@ -143,15 +151,18 @@ int get_storage_usage(char *in_file, char *customer, int year) {
   }
 
   while (1) {
-    int index2 = fscanf(file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+    int index2 = fscanf(file, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days,
+      &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
     if (index2 == EOF) {
       break;
     }
-    else if ((index2 != 9) || (servers < 0) || (hours < 0) || (network < 0) || (bytes < 0) || (blocks < 0)) {
+    else if ((index2 != 9) || (servers < 0) || (hours < 0) || (network < 0) ||
+      (bytes < 0) || (blocks < 0)) {
       fclose(file);
       return BAD_RECORD;
     }
-    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30) || (years < 0) || (year < 0)) {
+    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30) ||
+      (years < 0) || (year < 0)) {
       fclose(file);
       return BAD_DATE;
     }
@@ -188,15 +199,18 @@ int get_network_usage(char *in_file, int month, int year) {
   char customer_type[50]= {};
   int data_found = 0;
   while (1) {
-    int index2 = fscanf(inputfile, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
+    int index2 = fscanf(inputfile, "%d/%d/%d|%[^|]|%f|%f|%f|%f/%f\n", &months, 
+    &days, &years, customer_type, &servers, &hours, &network, &bytes, &blocks);
     if (index2 == EOF) {
       break;
     }
-    else if ((index2 != 9) || (servers < 0) || (hours < 0) || (network < 0) || (bytes < 0) || (blocks < 0)) {
+    else if ((index2 != 9) || (servers < 0) || (hours < 0) || (network < 0)
+    || (bytes < 0) || (blocks < 0)) {
       fclose(inputfile);
       return BAD_RECORD;
     }
-    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30) || (years < 0) || (year < 0) || (month < 1) || (month > 12)) {
+    else if ((months < 1) || (months > 12) || (days < 1) || (days > 30) ||
+      (years < 0) || (year < 0) || (month < 1) || (month > 12)) {
       fclose(inputfile);
       return BAD_DATE;
     }
