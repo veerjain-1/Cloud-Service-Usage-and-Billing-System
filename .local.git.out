@@ -1,0 +1,839 @@
+M	Makefile
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master bb9f828] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 132 insertions(+), 6 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 00d118b] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 2082643] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 1fbf6f0] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 12 insertions(+), 5 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master c6bbca2] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+), 8 deletions(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master ebe9634] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 15fec56] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master bccf651] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master de789a6] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 17ac09f] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master ea551fb] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 97568d7] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 21 insertions(+), 18 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 8aa0cb9] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 056bf23] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master bd2a752] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 01c2ed3] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master f100148] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 75b7aee] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 20 insertions(+), 8 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 6eab52c] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 18 insertions(+), 14 deletions(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 7d2d77f] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master ed797be] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@borg18.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 5caadf4] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 77 insertions(+), 54 deletions(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 4d3c96c] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@borg18.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 216 insertions(+), 211 deletions(-)
+ rewrite hw2.c (94%)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 8a180b1] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 49a77dc] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@borg18.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 9 insertions(+), 12 deletions(-)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 5772849] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Your branch is up to date with 'origin/master'.
+[master 1141c00] Submission for homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+Your branch is up to date with 'origin/master'.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.local.git.out
+	hw2.o
+	hw2_main
+	hw2_main.o
+	hw2_test
+	test_data_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+M	hw2.c
+Your branch is up to date with 'origin/master'.
+[master 2290213] Commit homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 28 insertions(+), 14 deletions(-)
+Your branch is up to date with 'origin/master'.
+[master 519572d] Submission for homework hw2
+ Committer: Veer Vinay Jain <jain621@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
